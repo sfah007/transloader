@@ -56,7 +56,7 @@ def get_links(update, context):
     op.add_argument("--no-sandbox")
     op.add_argument("--disable-dev-shm-usage")
     op.page_load_strategy = 'eager'
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=op)
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
 
     try:
         driver.get(HOST_URL)
